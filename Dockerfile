@@ -11,6 +11,7 @@ ENV APACHE_LOG_DIR /var/log/apache2
 RUN /bin/ln -sf ../sites-available/default-ssl /etc/apache2/sites-enabled/001-default-ssl
 RUN /bin/ln -sf ../mods-available/ssl.conf /etc/apache2/mods-enabled/
 RUN /bin/ln -sf ../mods-available/ssl.load /etc/apache2/mods-enabled/
+RUN rm -rf /tmp/xxx
 
 EXPOSE 80
 EXPOSE 443
